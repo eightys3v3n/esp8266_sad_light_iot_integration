@@ -1,0 +1,3 @@
+[submodule "espurna"]
+	path = espurna
+	url = git@github.com:eightys3v3n/espurna.git
