@@ -1,11 +1,11 @@
 ESP8266 Temperature Logger  
 
 # What it does
-Allows the integration of a Node ESP8266 into a BIOS S.A.D. light and the utilization of MQTT to turn it on and off.  
+Allows the integration of a Node ESP8266 into a BIOS S.A.D. light and the utilization of MQTT or Home Assistant to turn it on and off.  
 
 # Usage
 ## You Need:
-- A Node ESP8266 (or another model but you might have to change pin names).  
+- A NodeMCU 1.0 ESP8266 (or another model but you might have to change pin names).  
 - A BIOS Seasonal Affective Disorder light.
 - Soldering iron and bits.
 - Wires.
@@ -17,6 +17,10 @@ Solder a wire to each of those testing pads making sure to color them appropriat
 Put the circuit board back in the case, use tape to afix the ESP 8266 to the back of the LED saucer.  
 Put the 3.3V wire onto the ESP 8266's 3.3V pin, ground to ground, and the On/Off wire to the D1 pin.  
 Plug in the ESP 8266.  
-Edit the Arduino project for your use case, note the MQTT and WiFi defines.  
-Flash the ESP 8266, use serial to test everything works (it seems fine to plug in the USB And the BIOS living light with the ESP 8266 connected in between).  
-If everything is working, close up the now smart light. I also made a hole in my enclosure because I plan on doing further software development and I don't want to take it apart every time.  
+Edit the espurna/code/espurna/config/credentials.h file according to the espurna/README.md.  
+Flash ESPurna onto the ESP8266 by running espurna/code/build.sh from that directory.  
+Scan your network to find the new WiFi device, login to it with the information in credentials.h and:  
+- turn on MQTT  
+- turn on HASS Discovery  
+- Change the host name to something you like  
+
