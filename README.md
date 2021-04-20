@@ -1,5 +1,3 @@
-ESP8266 Temperature Logger  
-
 # What it does
 Allows the integration of a Node ESP8266 into a BIOS S.A.D. light and the utilization of MQTT or Home Assistant to turn it on and off.  
 
